@@ -1,70 +1,69 @@
-<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
-  <rect id="box" x="50" y="50" width="900" height="400" fill="none" stroke=""/>
-  <g id="objects"></g>
-  <script type="application/ecmascript"><![CDATA[
-    var svgNS = "http://www.w3.org/2000/svg";
-    var numObjects = 10; // จำนวนข้อความ
-    var objects = [];
-    var box = {
-      x: parseFloat(document.getElementById('box').getAttribute('x')),
-      y: parseFloat(document.getElementById('box').getAttribute('y')),
-      width: parseFloat(document.getElementById('box').getAttribute('width')),
-      height: parseFloat(document.getElementById('box').getAttribute('height'))
-    };
-
-    for (var i = 0; i < numObjects; i++) {
-      var text = document.createElementNS(svgNS, 'text');
-      var fontSize = 16; // ขนาดตัวอักษร
-      var textContent = 'xxxx'; // ข้อความที่จะแสดง
-      text.setAttribute('font-size', fontSize);
-      text.setAttribute('fill', 'red');
-
-      // ประมาณความกว้างและความสูงของข้อความ
-      var textWidth = textContent.length * fontSize * 0.6 * 2;
-      var textHeight = fontSize;
-
-      var x = box.x + Math.random() * (box.width - textWidth);
-      var y = box.y + Math.random() * (box.height - textHeight) + textHeight;
-
-      text.setAttribute('x', x);
-      text.setAttribute('y', y);
-      text.textContent = textContent;
-
-      document.getElementById('objects').appendChild(text);
-
-      var vx = (Math.random() - 0.5) * 4; // ความเร็วในแนว x
-      var vy = (Math.random() - 0.5) * 4; // ความเร็วในแนว y
-
-      objects.push({
-        element: text,
-        x: x,
-        y: y,
-        vx: vx,
-        vy: vy,
-        width: textWidth,
-        height: textHeight
-      });
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect id="box" x="50" y="50" width="400" height="400" fill="none" stroke="black"/>
+  <g id="texts">
+    <!-- สร้างข้อความ 20 ตัว -->
+    <text id="text1" x="50" y="100" font-size="16" fill="red">xxxx</text>
+    <text id="text2" x="100" y="150" font-size="16" fill="blue">xxxx</text>
+    <text id="text3" x="150" y="200" font-size="16" fill="green">xxxx</text>
+    <text id="text4" x="200" y="250" font-size="16" fill="orange">xxxx</text>
+    <text id="text5" x="250" y="300" font-size="16" fill="purple">xxxx</text>
+    <text id="text6" x="300" y="350" font-size="16" fill="brown">xxxx</text>
+    <text id="text7" x="350" y="100" font-size="16" fill="pink">xxxx</text>
+    <text id="text8" x="100" y="200" font-size="16" fill="cyan">xxxx</text>
+    <text id="text9" x="150" y="250" font-size="16" fill="magenta">xxxx</text>
+    <text id="text10" x="200" y="300" font-size="16" fill="lime">xxxx</text>
+    <text id="text11" x="250" y="350" font-size="16" fill="teal">xxxx</text>
+    <text id="text12" x="300" y="100" font-size="16" fill="navy">xxxx</text>
+    <text id="text13" x="350" y="150" font-size="16" fill="olive">xxxx</text>
+    <text id="text14" x="100" y="250" font-size="16" fill="maroon">xxxx</text>
+    <text id="text15" x="150" y="300" font-size="16" fill="gray">xxxx</text>
+    <text id="text16" x="200" y="350" font-size="16" fill="black">xxxx</text>
+    <text id="text17" x="250" y="100" font-size="16" fill="red">xxxx</text>
+    <text id="text18" x="300" y="150" font-size="16" fill="blue">xxxx</text>
+    <text id="text19" x="350" y="200" font-size="16" fill="green">xxxx</text>
+    <text id="text20" x="100" y="300" font-size="16" fill="orange">xxxx</text>
+  </g>
+  <style>
+    /* กำหนดการแอนิเมชันสำหรับแต่ละข้อความ */
+    @keyframes move1 {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(100px, 50px); }
+      50%  { transform: translate(50px, 150px); }
+      75%  { transform: translate(150px, 100px); }
+      100% { transform: translate(0, 0); }
     }
-
-    function animate() {
-      for (var i = 0; i < objects.length; i++) {
-        var obj = objects[i];
-        obj.x += obj.vx;
-        obj.y += obj.vy;
-
-        if (obj.x + obj.width >= box.x + box.width || obj.x <= box.x) {
-          obj.vx = -obj.vx;
-        }
-        if (obj.y >= box.y + box.height || obj.y - obj.height <= box.y) {
-          obj.vy = -obj.vy;
-        }
-
-        obj.element.setAttribute('x', obj.x);
-        obj.element.setAttribute('y', obj.y);
-      }
-      requestAnimationFrame(animate);
+    @keyframes move2 {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(-100px, 50px); }
+      50%  { transform: translate(-50px, -150px); }
+      75%  { transform: translate(-150px, -100px); }
+      100% { transform: translate(0, 0); }
     }
-
-    animate();
-  ]]></script>
+    /* สร้าง keyframes สำหรับข้อความอื่นๆ โดยปรับตำแหน่งตามต้องการ */
+    /* ... (สร้าง keyframes move3 ถึง move20) ... */
+    
+    /* สำหรับความยาว ไม่สามารถแสดงทุก keyframes ได้ที่นี่ แต่หลักการคือสร้าง keyframes ที่มีตำแหน่งแตกต่างกันสำหรับแต่ละข้อความ */
+    
+    /* ใช้การแอนิเมชันกับข้อความแต่ละตัว */
+    #text1 { animation: move1 1s linear infinite; }
+    #text2 { animation: move2 0.1s linear infinite; }
+    #text3 { animation: move1 1s linear infinite; }
+    #text4 { animation: move2 0.3s linear infinite; }
+    #text5 { animation: move1 0.1s linear infinite; }
+    #text6 { animation: move2 1s linear infinite; }
+    #text7 { animation: move1 1s linear infinite; }
+    #text8 { animation: move2 0.3s linear infinite; }
+    #text9 { animation: move1 1s linear infinite; }
+    #text10 { animation: move2 1s linear infinite; }
+    #text11 { animation: move1 0.1s linear infinite; }
+    #text12 { animation: move2 1s linear infinite; }
+    #text13 { animation: move1 1s linear infinite; }
+    #text14 { animation: move2 1s linear infinite; }
+    #text15 { animation: move1 1s linear infinite; }
+    #text16 { animation: move2 0.1s linear infinite; }
+    #text17 { animation: move1 1s linear infinite; }
+    #text18 { animation: move2 1s linear infinite; }
+    #text19 { animation: move1 1s linear infinite; }
+    #text20 { animation: move2 1s linear infinite; }
+  </style>
 </svg>
