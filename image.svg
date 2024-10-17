@@ -2,26 +2,26 @@
   <rect id="box" x="50" y="50" width="400" height="400" fill="none" stroke="black"/>
   <g id="texts">
     <!-- สร้างข้อความ 20 ตัว -->
-    <text id="text1" x="50" y="100" font-size="16" fill="red">xxxx</text>
-    <text id="text2" x="100" y="150" font-size="16" fill="blue">xxxx</text>
-    <text id="text3" x="150" y="200" font-size="16" fill="green">xxxx</text>
-    <text id="text4" x="200" y="250" font-size="16" fill="orange">xxxx</text>
-    <text id="text5" x="250" y="300" font-size="16" fill="purple">xxxx</text>
-    <text id="text6" x="300" y="350" font-size="16" fill="brown">xxxx</text>
-    <text id="text7" x="350" y="100" font-size="16" fill="pink">xxxx</text>
-    <text id="text8" x="100" y="200" font-size="16" fill="cyan">xxxx</text>
-    <text id="text9" x="150" y="250" font-size="16" fill="magenta">xxxx</text>
-    <text id="text10" x="200" y="300" font-size="16" fill="lime">xxxx</text>
-    <text id="text11" x="250" y="350" font-size="16" fill="teal">xxxx</text>
-    <text id="text12" x="300" y="100" font-size="16" fill="navy">xxxx</text>
-    <text id="text13" x="350" y="150" font-size="16" fill="olive">xxxx</text>
-    <text id="text14" x="100" y="250" font-size="16" fill="maroon">xxxx</text>
-    <text id="text15" x="150" y="300" font-size="16" fill="gray">xxxx</text>
-    <text id="text16" x="200" y="350" font-size="16" fill="black">xxxx</text>
-    <text id="text17" x="250" y="100" font-size="16" fill="red">xxxx</text>
-    <text id="text18" x="300" y="150" font-size="16" fill="blue">xxxx</text>
-    <text id="text19" x="350" y="200" font-size="16" fill="green">xxxx</text>
-    <text id="text20" x="100" y="300" font-size="16" fill="orange">xxxx</text>
+    <text id="text1" x="50" y="100" font-size="16" fill="red">𒐫</text>
+    <text id="text2" x="100" y="150" font-size="16" fill="blue">𒓜</text>
+    <text id="text3" x="150" y="200" font-size="16" fill="green">𒐫</text>
+    <text id="text4" x="200" y="250" font-size="16" fill="orange">𒒆</text>
+    <text id="text5" x="250" y="300" font-size="16" fill="purple">𒓜</text>
+    <text id="text6" x="300" y="350" font-size="16" fill="brown">𒐫</text>
+    <text id="text7" x="350" y="100" font-size="16" fill="pink">𒓜</text>
+    <text id="text8" x="100" y="200" font-size="16" fill="cyan">𒐫</text>
+    <text id="text9" x="150" y="250" font-size="16" fill="magenta">𒓜</text>
+    <text id="text10" x="200" y="300" font-size="16" fill="lime">𒒆</text>
+    <text id="text11" x="250" y="350" font-size="16" fill="teal">𒒆</text>
+    <text id="text12" x="300" y="100" font-size="16" fill="navy">𒐫</text>
+    <text id="text13" x="350" y="150" font-size="16" fill="olive">𒒆</text>
+    <text id="text14" x="100" y="250" font-size="16" fill="maroon">𒓜</text>
+    <text id="text15" x="150" y="300" font-size="16" fill="gray">𒐫</text>
+    <text id="text16" x="200" y="350" font-size="16" fill="black">𒒆</text>
+    <text id="text17" x="250" y="100" font-size="16" fill="red">𒓜</text>
+    <text id="text18" x="300" y="150" font-size="16" fill="blue">𒐫</text>
+    <text id="text19" x="350" y="200" font-size="16" fill="green">𒓜</text>
+    <text id="text20" x="100" y="300" font-size="16" fill="orange">𒐫</text>
   </g>
   <style>
     /* กำหนดการแอนิเมชันสำหรับแต่ละข้อความ */
