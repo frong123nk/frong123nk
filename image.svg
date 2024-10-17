@@ -2,7 +2,7 @@
   <rect id="box" x="50" y="50" width="400" height="400" fill="none" stroke="black"/>
   <g id="texts">
     <!-- สร้างข้อความ 20 ตัว -->
-    <text id="text1" x="50" y="100" font-size="16" fill="red">𒐫</text>
+    <text id="text1" x="50" y="100" font-size="16" fill="red">aaa</text>
     <text id="text2" x="100" y="150" font-size="16" fill="blue">𒓜</text>
     <text id="text3" x="150" y="200" font-size="16" fill="green">𒐫</text>
     <text id="text4" x="200" y="250" font-size="16" fill="orange">𒒆</text>
