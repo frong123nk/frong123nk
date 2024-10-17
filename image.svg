@@ -1,30 +1,70 @@
-<svg fill="none" viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-@keyframes bounce {
-  0%   { transform: scale(1,    1)   translateY(0)     skew(0deg,  0deg); }
-  3%   { transform: scale(1,    1)   translateY(0)     skew(0deg,  0deg); }
-  5%   { transform: scale(1.1,  .9)  translateY(5px)   skew(0deg,  0deg); }
-  12%  { transform: scale(.9,   1.1) translateY(-70px) skew(25deg, 5deg); }
-  13%  { transform: scale(.9,   1.1) translateY(-70px) skew(25deg, 5deg); }
-  20%  { transform: scale(1.05, .95) translateY(0)     skew(0deg,  0deg); }
-  22%  { transform: scale(1,    1)   translateY(-7px)  skew(0deg,  0deg); }
-  27%  { transform: scale(1,    1)   translateY(0)     skew(0deg,  0deg); }
-  100% { transform: scale(1,    1)   translateY(0)     skew(0deg,  0deg); }
-}
-h1 {
-  width: 120px;
-  line-height: 20px;
-  padding-top: 70px;
-  text-align: center;
-  font: 400 16px/1.5 Helvetica ,Arial ,sans-serif;
-  color: rgb(52, 73, 94);
-  transform-origin: bottom;
-  animation: 4s cubic-bezier(.5, 0, .5, 1.2) 1s infinite bounce;
-}
-      </style>
-      <h1>Hello, world</h1>
-    </div>
-  </foreignObject>
+<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect id="box" x="50" y="50" width="900" height="400" fill="none" stroke=""/>
+  <g id="objects"></g>
+  <script type="application/ecmascript"><![CDATA[
+    var svgNS = "http://www.w3.org/2000/svg";
+    var numObjects = 10; // จำนวนข้อความ
+    var objects = [];
+    var box = {
+      x: parseFloat(document.getElementById('box').getAttribute('x')),
+      y: parseFloat(document.getElementById('box').getAttribute('y')),
+      width: parseFloat(document.getElementById('box').getAttribute('width')),
+      height: parseFloat(document.getElementById('box').getAttribute('height'))
+    };
+
+    for (var i = 0; i < numObjects; i++) {
+      var text = document.createElementNS(svgNS, 'text');
+      var fontSize = 16; // ขนาดตัวอักษร
+      var textContent = '𒐫'; // ข้อความที่จะแสดง
+      text.setAttribute('font-size', fontSize);
+      text.setAttribute('fill', 'red');
+
+      // ประมาณความกว้างและความสูงของข้อความ
+      var textWidth = textContent.length * fontSize * 0.6 * 2;
+      var textHeight = fontSize;
+
+      var x = box.x + Math.random() * (box.width - textWidth);
+      var y = box.y + Math.random() * (box.height - textHeight) + textHeight;
+
+      text.setAttribute('x', x);
+      text.setAttribute('y', y);
+      text.textContent = textContent;
+
+      document.getElementById('objects').appendChild(text);
+
+      var vx = (Math.random() - 0.5) * 4 * 100; // ความเร็วในแนว x
+      var vy = (Math.random() - 0.5) * 4 * 100; // ความเร็วในแนว y
+
+      objects.push({
+        element: text,
+        x: x,
+        y: y,
+        vx: vx,
+        vy: vy,
+        width: textWidth,
+        height: textHeight
+      });
+    }
+
+    function animate() {
+      for (var i = 0; i < objects.length; i++) {
+        var obj = objects[i];
+        obj.x += obj.vx;
+        obj.y += obj.vy;
+
+        if (obj.x + obj.width >= box.x + box.width || obj.x <= box.x) {
+          obj.vx = -obj.vx;
+        }
+        if (obj.y >= box.y + box.height || obj.y - obj.height <= box.y) {
+          obj.vy = -obj.vy;
+        }
+
+        obj.element.setAttribute('x', obj.x);
+        obj.element.setAttribute('y', obj.y);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  ]]></script>
 </svg>
