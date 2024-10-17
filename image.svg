@@ -15,7 +15,7 @@
     for (var i = 0; i < numObjects; i++) {
       var text = document.createElementNS(svgNS, 'text');
       var fontSize = 16; // ขนาดตัวอักษร
-      var textContent = '𒐫'; // ข้อความที่จะแสดง
+      var textContent = 'xxxx'; // ข้อความที่จะแสดง
       text.setAttribute('font-size', fontSize);
       text.setAttribute('fill', 'red');
 
@@ -32,8 +32,8 @@
 
       document.getElementById('objects').appendChild(text);
 
-      var vx = (Math.random() - 0.5) * 4 * 100; // ความเร็วในแนว x
-      var vy = (Math.random() - 0.5) * 4 * 100; // ความเร็วในแนว y
+      var vx = (Math.random() - 0.5) * 4; // ความเร็วในแนว x
+      var vy = (Math.random() - 0.5) * 4; // ความเร็วในแนว y
 
       objects.push({
         element: text,
