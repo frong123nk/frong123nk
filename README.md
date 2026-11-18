@@ -1,3 +1,3 @@
-<button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px;">Hello</button>
-
-![](./image.svg)
+<p align="center">
+  <img src="./image.svg" width="420" alt="snake animation" />
+</p>
