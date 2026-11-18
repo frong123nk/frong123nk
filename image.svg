@@ -1,26 +1,128 @@
-<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<svg width="420" height="210" viewBox="0 0 420 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
   <style>
-    .track { fill: none; stroke: #30363d; stroke-width: 2; }
-    .snake {
-      fill: none;
-      stroke: #39d353;
-      stroke-width: 8;
-      stroke-linecap: round;
-    }
-    .tail3 { stroke-dasharray: 90 310; opacity: .2;  animation: c3 4s linear infinite; }
-    .tail2 { stroke-dasharray: 60 340; opacity: .45; animation: c2 4s linear infinite; }
-    .tail1 { stroke-dasharray: 35 365; opacity: .75; animation: c1 4s linear infinite; }
-    .head  { stroke-dasharray: 12 388; stroke: #7ee787; stroke-width: 10;
-             animation: c0 4s linear infinite; }
-
-    @keyframes c3 { from { stroke-dashoffset: 90; } to { stroke-dashoffset: -310; } }
-    @keyframes c2 { from { stroke-dashoffset: 60; } to { stroke-dashoffset: -340; } }
-    @keyframes c1 { from { stroke-dashoffset: 35; } to { stroke-dashoffset: -365; } }
-    @keyframes c0 { from { stroke-dashoffset: 12; } to { stroke-dashoffset: -388; } }
+    .cell { transform-box: fill-box; transform-origin: center; }
+    .snake { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    @keyframes e0_0{0%{transform:scale(1);opacity:1}1.50%{transform:scale(1.5);opacity:.6}3.00%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_0{animation:e0_0 10s linear infinite}
+    @keyframes e0_1{0%, 1.34%{transform:scale(1);opacity:1}2.84%{transform:scale(1.5);opacity:.6}4.34%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_1{animation:e0_1 10s linear infinite}
+    @keyframes e0_3{0%, 4.03%{transform:scale(1);opacity:1}5.53%{transform:scale(1.5);opacity:.6}7.03%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_3{animation:e0_3 10s linear infinite}
+    @keyframes e0_4{0%, 5.37%{transform:scale(1);opacity:1}6.87%{transform:scale(1.5);opacity:.6}8.37%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_4{animation:e0_4 10s linear infinite}
+    @keyframes e0_6{0%, 8.05%{transform:scale(1);opacity:1}9.55%{transform:scale(1.5);opacity:.6}11.05%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_6{animation:e0_6 10s linear infinite}
+    @keyframes e0_8{0%, 10.74%{transform:scale(1);opacity:1}12.24%{transform:scale(1.5);opacity:.6}13.74%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_8{animation:e0_8 10s linear infinite}
+    @keyframes e0_9{0%, 12.08%{transform:scale(1);opacity:1}13.58%{transform:scale(1.5);opacity:.6}15.08%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_9{animation:e0_9 10s linear infinite}
+    @keyframes e0_10{0%, 13.42%{transform:scale(1);opacity:1}14.92%{transform:scale(1.5);opacity:.6}16.42%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_10{animation:e0_10 10s linear infinite}
+    @keyframes e0_11{0%, 14.76%{transform:scale(1);opacity:1}16.26%{transform:scale(1.5);opacity:.6}17.76%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e0_11{animation:e0_11 10s linear infinite}
+    @keyframes e1_2{0%, 28.18%{transform:scale(1);opacity:1}29.68%{transform:scale(1.5);opacity:.6}31.18%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_2{animation:e1_2 10s linear infinite}
+    @keyframes e1_3{0%, 26.84%{transform:scale(1);opacity:1}28.34%{transform:scale(1.5);opacity:.6}29.84%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_3{animation:e1_3 10s linear infinite}
+    @keyframes e1_4{0%, 25.50%{transform:scale(1);opacity:1}27.00%{transform:scale(1.5);opacity:.6}28.50%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_4{animation:e1_4 10s linear infinite}
+    @keyframes e1_5{0%, 24.16%{transform:scale(1);opacity:1}25.66%{transform:scale(1.5);opacity:.6}27.16%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_5{animation:e1_5 10s linear infinite}
+    @keyframes e1_7{0%, 21.47%{transform:scale(1);opacity:1}22.97%{transform:scale(1.5);opacity:.6}24.47%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_7{animation:e1_7 10s linear infinite}
+    @keyframes e1_8{0%, 20.13%{transform:scale(1);opacity:1}21.63%{transform:scale(1.5);opacity:.6}23.13%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_8{animation:e1_8 10s linear infinite}
+    @keyframes e1_9{0%, 18.79%{transform:scale(1);opacity:1}20.29%{transform:scale(1.5);opacity:.6}21.79%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_9{animation:e1_9 10s linear infinite}
+    @keyframes e1_10{0%, 17.45%{transform:scale(1);opacity:1}18.95%{transform:scale(1.5);opacity:.6}20.45%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_10{animation:e1_10 10s linear infinite}
+    @keyframes e1_11{0%, 16.11%{transform:scale(1);opacity:1}17.61%{transform:scale(1.5);opacity:.6}19.11%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e1_11{animation:e1_11 10s linear infinite}
+    @keyframes e2_0{0%, 32.21%{transform:scale(1);opacity:1}33.71%{transform:scale(1.5);opacity:.6}35.21%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_0{animation:e2_0 10s linear infinite}
+    @keyframes e2_1{0%, 33.55%{transform:scale(1);opacity:1}35.05%{transform:scale(1.5);opacity:.6}36.55%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_1{animation:e2_1 10s linear infinite}
+    @keyframes e2_2{0%, 34.89%{transform:scale(1);opacity:1}36.39%{transform:scale(1.5);opacity:.6}37.89%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_2{animation:e2_2 10s linear infinite}
+    @keyframes e2_4{0%, 37.58%{transform:scale(1);opacity:1}39.08%{transform:scale(1.5);opacity:.6}40.58%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_4{animation:e2_4 10s linear infinite}
+    @keyframes e2_5{0%, 38.92%{transform:scale(1);opacity:1}40.42%{transform:scale(1.5);opacity:.6}41.92%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_5{animation:e2_5 10s linear infinite}
+    @keyframes e2_6{0%, 40.26%{transform:scale(1);opacity:1}41.76%{transform:scale(1.5);opacity:.6}43.26%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_6{animation:e2_6 10s linear infinite}
+    @keyframes e2_8{0%, 42.95%{transform:scale(1);opacity:1}44.45%{transform:scale(1.5);opacity:.6}45.95%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_8{animation:e2_8 10s linear infinite}
+    @keyframes e2_10{0%, 45.63%{transform:scale(1);opacity:1}47.13%{transform:scale(1.5);opacity:.6}48.63%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_10{animation:e2_10 10s linear infinite}
+    @keyframes e2_11{0%, 46.97%{transform:scale(1);opacity:1}48.47%{transform:scale(1.5);opacity:.6}49.97%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e2_11{animation:e2_11 10s linear infinite}
+    @keyframes e3_0{0%, 63.08%{transform:scale(1);opacity:1}64.58%{transform:scale(1.5);opacity:.6}66.08%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_0{animation:e3_0 10s linear infinite}
+    @keyframes e3_1{0%, 61.74%{transform:scale(1);opacity:1}63.24%{transform:scale(1.5);opacity:.6}64.74%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_1{animation:e3_1 10s linear infinite}
+    @keyframes e3_2{0%, 60.39%{transform:scale(1);opacity:1}61.89%{transform:scale(1.5);opacity:.6}63.39%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_2{animation:e3_2 10s linear infinite}
+    @keyframes e3_5{0%, 56.37%{transform:scale(1);opacity:1}57.87%{transform:scale(1.5);opacity:.6}59.37%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_5{animation:e3_5 10s linear infinite}
+    @keyframes e3_7{0%, 53.68%{transform:scale(1);opacity:1}55.18%{transform:scale(1.5);opacity:.6}56.68%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_7{animation:e3_7 10s linear infinite}
+    @keyframes e3_8{0%, 52.34%{transform:scale(1);opacity:1}53.84%{transform:scale(1.5);opacity:.6}55.34%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_8{animation:e3_8 10s linear infinite}
+    @keyframes e3_9{0%, 51.00%{transform:scale(1);opacity:1}52.50%{transform:scale(1.5);opacity:.6}54.00%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_9{animation:e3_9 10s linear infinite}
+    @keyframes e3_11{0%, 48.32%{transform:scale(1);opacity:1}49.82%{transform:scale(1.5);opacity:.6}51.32%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e3_11{animation:e3_11 10s linear infinite}
+    @keyframes e4_0{0%, 64.42%{transform:scale(1);opacity:1}65.92%{transform:scale(1.5);opacity:.6}67.42%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_0{animation:e4_0 10s linear infinite}
+    @keyframes e4_2{0%, 67.11%{transform:scale(1);opacity:1}68.61%{transform:scale(1.5);opacity:.6}70.11%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_2{animation:e4_2 10s linear infinite}
+    @keyframes e4_3{0%, 68.45%{transform:scale(1);opacity:1}69.95%{transform:scale(1.5);opacity:.6}71.45%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_3{animation:e4_3 10s linear infinite}
+    @keyframes e4_4{0%, 69.79%{transform:scale(1);opacity:1}71.29%{transform:scale(1.5);opacity:.6}72.79%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_4{animation:e4_4 10s linear infinite}
+    @keyframes e4_6{0%, 72.47%{transform:scale(1);opacity:1}73.97%{transform:scale(1.5);opacity:.6}75.47%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_6{animation:e4_6 10s linear infinite}
+    @keyframes e4_7{0%, 73.82%{transform:scale(1);opacity:1}75.32%{transform:scale(1.5);opacity:.6}76.82%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_7{animation:e4_7 10s linear infinite}
+    @keyframes e4_8{0%, 75.16%{transform:scale(1);opacity:1}76.66%{transform:scale(1.5);opacity:.6}78.16%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_8{animation:e4_8 10s linear infinite}
+    @keyframes e4_9{0%, 76.50%{transform:scale(1);opacity:1}78.00%{transform:scale(1.5);opacity:.6}79.50%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_9{animation:e4_9 10s linear infinite}
+    @keyframes e4_10{0%, 77.84%{transform:scale(1);opacity:1}79.34%{transform:scale(1.5);opacity:.6}80.84%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_10{animation:e4_10 10s linear infinite}
+    @keyframes e4_11{0%, 79.18%{transform:scale(1);opacity:1}80.68%{transform:scale(1.5);opacity:.6}82.18%, 88%{transform:scale(0);opacity:0}96%, 100%{transform:scale(1);opacity:1}}.e4_11{animation:e4_11 10s linear infinite}
+    @keyframes s0{0%{stroke-dashoffset:130}85%, 100%{stroke-dashoffset:-1770}}.s0{stroke-dasharray:130 4000;opacity:0.18;stroke-width:8;animation:s0 10s linear infinite}
+    @keyframes s1{0%{stroke-dashoffset:85}85%, 100%{stroke-dashoffset:-1815}}.s1{stroke-dasharray:85 4000;opacity:0.4;stroke-width:8;animation:s1 10s linear infinite}
+    @keyframes s2{0%{stroke-dashoffset:45}85%, 100%{stroke-dashoffset:-1855}}.s2{stroke-dasharray:45 4000;opacity:0.75;stroke-width:9;animation:s2 10s linear infinite}
+    @keyframes s3{0%{stroke-dashoffset:14}85%, 100%{stroke-dashoffset:-1886}}.s3{stroke-dasharray:14 4000;opacity:1.0;stroke-width:11;animation:s3 10s linear infinite}
   </style>
-
-  <rect class="snake tail3" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
-  <rect class="snake tail2" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
-  <rect class="snake tail1" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
-  <rect class="snake head"  x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+  <rect width="420" height="210" rx="14" fill="#0d1117"/>
+  <rect class="cell e0_0" x="34" y="34" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e0_1" x="64" y="34" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect x="94" y="34" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e0_3" x="124" y="34" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e0_4" x="154" y="34" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect x="184" y="34" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e0_6" x="214" y="34" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect x="244" y="34" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e0_8" x="274" y="34" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e0_9" x="304" y="34" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e0_10" x="334" y="34" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e0_11" x="364" y="34" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect x="34" y="64" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect x="64" y="64" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e1_2" x="94" y="64" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e1_3" x="124" y="64" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e1_4" x="154" y="64" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e1_5" x="184" y="64" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect x="214" y="64" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e1_7" x="244" y="64" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e1_8" x="274" y="64" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e1_9" x="304" y="64" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e1_10" x="334" y="64" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e1_11" x="364" y="64" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e2_0" x="34" y="94" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e2_1" x="64" y="94" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e2_2" x="94" y="94" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect x="124" y="94" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e2_4" x="154" y="94" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e2_5" x="184" y="94" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e2_6" x="214" y="94" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect x="244" y="94" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e2_8" x="274" y="94" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect x="304" y="94" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e2_10" x="334" y="94" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e2_11" x="364" y="94" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect class="cell e3_0" x="34" y="124" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e3_1" x="64" y="124" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e3_2" x="94" y="124" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect x="124" y="124" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect x="154" y="124" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e3_5" x="184" y="124" width="22" height="22" rx="4" fill="#0e4429"/>
+  <rect x="214" y="124" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e3_7" x="244" y="124" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e3_8" x="274" y="124" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e3_9" x="304" y="124" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect x="334" y="124" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e3_11" x="364" y="124" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e4_0" x="34" y="154" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect x="64" y="154" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e4_2" x="94" y="154" width="22" height="22" rx="4" fill="#006d32"/>
+  <rect class="cell e4_3" x="124" y="154" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e4_4" x="154" y="154" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect x="184" y="154" width="22" height="22" rx="4" fill="#161b22"/>
+  <rect class="cell e4_6" x="214" y="154" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e4_7" x="244" y="154" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e4_8" x="274" y="154" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e4_9" x="304" y="154" width="22" height="22" rx="4" fill="#26a641"/>
+  <rect class="cell e4_10" x="334" y="154" width="22" height="22" rx="4" fill="#39d353"/>
+  <rect class="cell e4_11" x="364" y="154" width="22" height="22" rx="4" fill="#006d32"/>
+  <g filter="url(#glow)">
+    <path class="snake s0" d="M45 45 H375 V75 H45 V105 H375 V135 H45 V165 H375" stroke="#a371f7"/>
+    <path class="snake s1" d="M45 45 H375 V75 H45 V105 H375 V135 H45 V165 H375" stroke="#a371f7"/>
+    <path class="snake s2" d="M45 45 H375 V75 H45 V105 H375 V135 H45 V165 H375" stroke="#a371f7"/>
+    <path class="snake s3" d="M45 45 H375 V75 H45 V105 H375 V135 H45 V165 H375" stroke="#d2a8ff"/>
+  </g>
 </svg>
