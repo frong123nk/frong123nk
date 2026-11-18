@@ -24,6 +24,4 @@
   <rect class="snake tail2" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
   <rect class="snake tail1" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
   <rect class="snake head"  x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
-
-  <text x="250" y="260" text-anchor="middle" font-family="monospace" font-size="28" fill="#c9d1d9">Hello 👋</text>
 </svg>
