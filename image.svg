@@ -6,17 +6,17 @@
       stroke: #39d353;
       stroke-width: 8;
       stroke-linecap: round;
-      animation: crawl 4s linear infinite;
     }
-    .tail3 { stroke-dasharray: 90 310; --start: 90;  opacity: .2; }
-    .tail2 { stroke-dasharray: 60 340; --start: 60;  opacity: .45; }
-    .tail1 { stroke-dasharray: 35 365; --start: 35;  opacity: .75; }
-    .head  { stroke-dasharray: 12 388; --start: 12;  stroke: #7ee787; stroke-width: 10; }
+    .tail3 { stroke-dasharray: 90 310; opacity: .2;  animation: c3 4s linear infinite; }
+    .tail2 { stroke-dasharray: 60 340; opacity: .45; animation: c2 4s linear infinite; }
+    .tail1 { stroke-dasharray: 35 365; opacity: .75; animation: c1 4s linear infinite; }
+    .head  { stroke-dasharray: 12 388; stroke: #7ee787; stroke-width: 10;
+             animation: c0 4s linear infinite; }
 
-    @keyframes crawl {
-      from { stroke-dashoffset: var(--start); }
-      to   { stroke-dashoffset: calc(var(--start) - 400); }
-    }
+    @keyframes c3 { from { stroke-dashoffset: 90; } to { stroke-dashoffset: -310; } }
+    @keyframes c2 { from { stroke-dashoffset: 60; } to { stroke-dashoffset: -340; } }
+    @keyframes c1 { from { stroke-dashoffset: 35; } to { stroke-dashoffset: -365; } }
+    @keyframes c0 { from { stroke-dashoffset: 12; } to { stroke-dashoffset: -388; } }
   </style>
 
   <rect class="track" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
