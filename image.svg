@@ -1,16 +1,29 @@
-<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-  <rect id="box" x="50" y="50" width="400" height="400" fill="none" stroke="black"/>
-  <text id="text" x="50" y="100" font-size="24" fill="red">𒑉</text>
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes randomBounce {
-      0%   { transform: translate(0px, 0px); }
-      25%  { transform: translate(400px, 0px); }
-      50% { transform: translate(400px, 400px); }
-      75% { transform: translate(0px, 400px); }
-      100% { transform: translate(0px, 0px); }
+    .track { fill: none; stroke: #30363d; stroke-width: 2; }
+    .snake {
+      fill: none;
+      stroke: #39d353;
+      stroke-width: 8;
+      stroke-linecap: round;
+      animation: crawl 4s linear infinite;
     }
-    #text {
-      animation: randomBounce 1s linear infinite;
+    .tail3 { stroke-dasharray: 90 310; --start: 90;  opacity: .2; }
+    .tail2 { stroke-dasharray: 60 340; --start: 60;  opacity: .45; }
+    .tail1 { stroke-dasharray: 35 365; --start: 35;  opacity: .75; }
+    .head  { stroke-dasharray: 12 388; --start: 12;  stroke: #7ee787; stroke-width: 10; }
+
+    @keyframes crawl {
+      from { stroke-dashoffset: var(--start); }
+      to   { stroke-dashoffset: calc(var(--start) - 400); }
     }
   </style>
+
+  <rect class="track" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+  <rect class="snake tail3" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+  <rect class="snake tail2" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+  <rect class="snake tail1" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+  <rect class="snake head"  x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
+
+  <text x="250" y="260" text-anchor="middle" font-family="monospace" font-size="28" fill="#c9d1d9">Hello 👋</text>
 </svg>
