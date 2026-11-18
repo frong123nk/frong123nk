@@ -19,7 +19,6 @@
     @keyframes c0 { from { stroke-dashoffset: 12; } to { stroke-dashoffset: -388; } }
   </style>
 
-  <rect class="track" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
   <rect class="snake tail3" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
   <rect class="snake tail2" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
   <rect class="snake tail1" x="50" y="50" width="400" height="400" rx="12" pathLength="400"/>
